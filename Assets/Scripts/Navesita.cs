@@ -18,6 +18,8 @@ public class Navesita : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        GameController.instance.tiempo += Time.deltaTime;
+
         scoreTxt.text = "Score: " + GameController.instance.tiempo;
 
         float move = Input.acceleration.x;

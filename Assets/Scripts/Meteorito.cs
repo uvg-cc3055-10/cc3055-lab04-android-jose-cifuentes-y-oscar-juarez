@@ -24,8 +24,7 @@ public class Meteorito : MonoBehaviour {
             {
                 Destroy(gameObject);
             }            
-        }        
-        //rb2d.transform.Rotate(new Vector3(0, 0, 1) * speed * Time.deltaTime);
+        }              
 
     }
 }

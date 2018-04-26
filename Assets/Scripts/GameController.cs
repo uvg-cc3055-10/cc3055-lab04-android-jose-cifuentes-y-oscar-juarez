@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
     public static GameController instance;
-    public int score = 0;
     public bool gameOver = false;
     public float tiempo = 0;
    
