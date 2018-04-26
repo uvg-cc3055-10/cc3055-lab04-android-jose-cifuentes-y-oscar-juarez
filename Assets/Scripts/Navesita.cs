@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Navesita : MonoBehaviour {
@@ -17,12 +18,25 @@ public class Navesita : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        GameController.instance.tiempo += Time.deltaTime;
-
         scoreTxt.text = "Score: " + GameController.instance.tiempo;
 
         float move = Input.acceleration.x;
         rb2d.transform.Translate(Vector2.right * speed * move * Time.deltaTime);        
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameController.instance.gameOver = true;
+
+        float score = PlayerPrefs.GetFloat("record");
+
+        if (score < GameController.instance.tiempo)
+        {
+            PlayerPrefs.SetFloat("record",GameController.instance.tiempo);
+        }
+
+        SceneManager.LoadScene("Menu");
+    }
+
 }

@@ -7,12 +7,10 @@ public class Meteorito : MonoBehaviour {
 
     Rigidbody2D rb2d;
     float speed = 5f;
-    public GameObject meteorito;    
 
     // Use this for initialization
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-        meteorito = GetComponent<GameObject>();
     }
 	
 	// Update is called once per frame

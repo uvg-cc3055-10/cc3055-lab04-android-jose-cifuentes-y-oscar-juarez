@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107cac3e763ffe14d884d0366bb281ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorito: {fileID: 0}
 --- !u!212 &212465130302922536
 SpriteRenderer:
   m_ObjectHideFlags: 1
